@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Citibike Maps</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Susan Merriam</title>
+	<meta charset="utf-8">
+	<meta name="description" content="data journalism">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" type='text/css'> 
+
+	<!-- map -->
+
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+	
+	<!-- stylesheet!!!! -->
+	<link rel="stylesheet" type="text/css" href="project-stylesheet.css"> 
+
+		<style type="text/css" id="wp-custom-css">
+			#section.viz {
+				color: black;
+				font-family: 'Titillium Web';
+				font-size: 18px;
+				font-weight: 900;	}		
+		</style>
+		<style>
+			.grid-container {
+				display: grid;
+				grid-template-columns: auto auto;
+				/* background-color: #2196F3; */
+				/* padding: 10%; */
+			}
+			.grid-item {
+				/* background-color: rgba(255, 255, 255, 0.8); */
+				/* border: 1px solid rgba(0, 0, 0, 0.8); */
+				/* padding: 3%; */
+				font-size: 12px;
+				text-align: left;
+				padding-right: 5%;
+			}
+		</style>
+	
+	
+
+</head>
+
+<body>
+
+	<div id="main">
+		<h1><a href="../../index.html">Susan Merriam<br></a>
+        </h1>
+		<!-- <h2>Investigating Census Peculiarities<br>
+			Data Project<br>
+            2022
+		</h2> -->
+	</div>	
+
+	<div class="site-main">
+		<div id="wrapper" class="site-wrapper">
+			
+			<div id="content" class="single single-feature" data-col="2">
+	
+				<div class="single-feature__row">
+					<div id="primary" class="single-feature__col">
+						<div id="article-main">
+
+							<div class="article-header__container">
+
+								<header class="single-post-header">
+									<div class="single-header">
+										<p class="single-metadata-single-topic">
+											<span style="color: #722155">
+												<strong>
+													Points Unknown 
+												</strong>
+											</span>
+										</p>
+										
+										<h1 class="article-title article-title-single entry-title">Citibike Data</h1>
+				
+									</div> <!-- single-header -->
+				
+									<div class="single-header-metadata-and-share-wrap">
+										<div class="single-header-metadata-wrap">
+											<p class="single-metadata-single-byline">
+												<a href="https://github.com/semerriam/points-unknown/blob/main/projects/pj-citibike-map/data/citi_bike_maps.ipynb" target="_blank"> <u style="text-decoration-color:#722155">Github Repo</u></a>
+											</p>
+											
+											
+
+
+											<p class="topic single-topic">
+												<time class="datetime">Jun. 13, 2022</time>
+				
+										</div><!-- single header info wrap -->
+										
+									</div><!-- single header info -->
+									
+								</header><!-- single post header -->
+
+							</div> <!-- article header container -->
+
+							<div class="textblock"> 
+								<br>
+								<p data-paragraph="main">
+								These maps were developed for a weekly assignment for the summer mapping course.
+								</p>		
+
+								
+							</div>
+									
+												
+
+
+
+								<!-- Map Header -->		
+								<div class="core-html ">
+									<section class="viz">
+									<!-- <header class="viz"> -->
+										<h5 class="viz-title">2020 Citibike Trips</h5>
+										 <!-- <p class="viz-subtitle">
+											 subtitle
+										 </p> -->
+
+										<div id="basic-legend" class="legend2">
+											<h4>
+												Popularity of Bike Stations
+											</h4>
+											<div><span style="background-color: #40273C; height:8px; width:8px"></span>100%
+												<span style="background-color: #722155; height:8px; width:8px"></span>80%
+												<span style="background-color: #BB536B; height:8px; width:8px"></span>60%
+												<span style="background-color: #E58F77; height:8px; width:8px"></span>40%
+												<span style="background-color: #F1D299; height:8px; width:8px"></span>20%
+												<span style="background-color: #F6EFC6; height:8px; width:8px"></span>0%
+											</div>
+										</div>
+									</section>
+								</div>
+                                
+								<!-- <br>
+								<br> -->
+								<!-- <hr> -->
+								<!-- Legend -->
+								
+								<!-- <div id="basic-legend" class="legend2">
+									<h4>Points of Contention</h4>
+									<p><em>Click on locations for more information</em></p>
+									<div>
+										<span style="background-color: #bb3e03; height:10px; width:10px">
+										</span>
+									 
+										Caption</div>
+								</div> -->
+								
+								<!-- MAP!!!!!-->
+								
+								<div class="grid-container">
+									<div class="grid-item">
+										<div id="basic-legend" class="legend2">
+											<h4>Bike Starts</h4>
+										</div>
+										<div id='map1'></div>
+										<script type='text/javascript' src="map1.js"></script>
+									</div>
+									<div class="grid-item">
+										<div id="basic-legend" class="legend2">
+											<h4>Bike Stops</h4>
+										</div>
+										<div id='map2'></div>
+										<script type='text/javascript' src="map2.js"></script>
+									</div>
+								</div>
+
+								
+								<!-- Chart Footer Graph1-->		
+								<div class="core-html">
+									<p class="viz-caption">Source: <a href="https://ride.citibikenyc.com/system-data" target="_blank"><u style="text-decoration-color:#722155">Citi Bike Trip History Data</u></a>
+									</p>
+								</div>
+
+								<!-- Chart Ends-->
+                                
+
+								<!-- Map Header -->		
+								<div class="core-html ">
+									<section class="viz">
+									<!-- <header class="viz"> -->
+										<h5 class="viz-title">2021 Citibike Trips</h5>
+										 <!-- <p class="viz-subtitle">subtitle	 
+										 </p> -->
+
+										 <div id="basic-legend" class="legend2">
+											<h4>
+												Popularity of Bike Stations
+											</h4>
+											<div><span style="background-color: #40273C; height:8px; width:8px"></span>100%
+												<span style="background-color: #722155; height:8px; width:8px"></span>80%
+												<span style="background-color: #BB536B; height:8px; width:8px"></span>60%
+												<span style="background-color: #E58F77; height:8px; width:8px"></span>40%
+												<span style="background-color: #F1D299; height:8px; width:8px"></span>20%
+												<span style="background-color: #F6EFC6; height:8px; width:8px"></span>0%
+											</div>
+										</div>
+								 	<!-- </header> -->
+									</section>
+								</div>
+
+
+								<!-- MAP!!!!!-->
+								
+								<div class="grid-container">
+									<div class="grid-item">
+										<div id="basic-legend" class="legend2">
+											<h4>Bike Starts</h4>
+										</div>
+										<div id='map3'></div>
+										<script type='text/javascript' src="map3.js"></script>
+									</div>
+									<div class="grid-item">
+										<div id="basic-legend" class="legend2">
+											<h4>Bike Stops</h4>
+										</div>
+										<div id='map4'></div>
+										<script type='text/javascript' src="map4.js"></script>
+									</div>
+								</div>
+
+
+
+								<!-- Chart Footer Graph1-->		
+								<div class="core-html">
+									<p class="viz-caption">Source: <a href="https://ride.citibikenyc.com/system-data" target="_blank"><u style="text-decoration-color:#40273C">Citi Bike Trip History Data</u></a>
+									</p>
+								</div>
+	
+
+	
+
+
+
+						</div><!-- article main -->
+					</div><!-- primary single-feature_col -->
+				</div><!-- single-feature__row -->
+
+			</div><!-- .single single-feature -->
+			
+			<hr style="width:5%" color:"#722155">
+
+			<div id="description">
+				<!-- <h3>
+					<br>
+					<br>
+					<em>
+					Tools Used:
+		
+					Data: Python –⁠ Pandas <br>
+					Graphs: JavaScript, Mapbox GL JS 
+					<br>
+					<a href="https://github.com/semerriam/points-unknown/tree/main/projects/pj-mapping-assignmments" target="_blank"><u style="text-decoration-color:#bb3e03">Github</u></a>
+					<br>
+					<br>
+					<a href="../../index.html" target="_blank"> <u style="text-decoration-color:#bb3e03">Home</u></a>
+					
+					<br>
+					</em>
+				</h3> -->
+			</div>
+		</div><!-- #wrapper .site-wrapper -->
+	</div><!-- .site-main -->
+
+
+
+</body>
+
+</head>

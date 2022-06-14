@@ -1,7 +1,5 @@
 # Points Unknown Mapping Assignments
 
-Mapping Class Assignments
-
 Data publication and documentation for mapping class assignments in the [Points Unknown](https://pointsunknown.nyc/) couse. 
 
 ## Projects

@@ -1,4 +1,4 @@
-# points-unknown
+# Points Unknown Assignments
 
 Mapping Class Assignments
 

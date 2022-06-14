@@ -1,0 +1,606 @@
+@font-face {
+    font-family: 'Titillium Web';
+        }		
+      /* #make adjustments to most of text here */
+
+#main h1 {
+    color: black;
+    font-size: 20px;
+    font-family: 'Titillium Web';
+    line-height: 26px;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-bottom: 70px;
+}
+
+#nav h1 {
+    vertical-align: center;
+    text-align: left;
+    position: fixed;
+    z-index: 15;
+    margin-top: -140px;
+    margin-left: 15px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: normal;
+    color: black;			
+}
+
+#nav h1 a, h2 a {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;	
+    color: black;		
+}
+
+#nav h1 a:hover, h2 a:hover {
+    text-decoration: none;
+    color: white;  
+    transition: all 0.2s ease-in-out;
+}
+
+
+#main a {
+    color: black;
+}
+
+#main a:hover {
+    color: black;
+    background-color: #bfe6ff;
+    font-family: 'Titillium Web';
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    }
+
+#description h3 {
+    color: black;
+    font-family: 'Titillium Web';
+    font-size: 18px;
+    font-weight: 500;
+    background-color:#fff;
+    margin: auto 0;
+    max-width: 700px; 
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+	
+}
+
+
+body{
+font-family:"Titillium Web","Helvetica Neue",Helvetica,Arial,sans-serif;
+color:#222;
+overflow:hidden;
+overflow-y:auto}
+@media screen and (max-width:767px){body{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%}
+}
+
+
+.site-main,
+.site-wrapper{
+background-color:#fff;
+margin: auto 0;
+max-width: 1000px; 
+padding-left: 5%;
+padding-right: 5%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+max-width: 100% 
+
+}
+
+
+.site-main{
+padding-bottom:20px;
+max-width: 1000px; 
+}
+
+.textblock{
+background-color:#fff;
+margin: auto 0;
+max-width: 700px; 
+padding-left: 5%;
+padding-right: 5%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+
+}
+
+a{
+color:#222;
+text-decoration:none}
+h1,h2,h3{
+font-family:"Titillum Web","Helvetica Neue",Helvetica,Arial,sans-serif}
+h2,h3{
+margin-bottom:10px;
+font-weight:700}
+
+h4{
+font-family:"Titillum Web";
+
+}
+
+
+h2 {
+font-family: "Titillium Web";
+line-height: 26px;
+font-size: 18px;
+font-weight: 700;
+padding-top: 20px;
+padding-bottom: 5px;
+}
+
+
+h5{
+font-family:"Titillum Web";
+margin-bottom:15px;
+max-width: 800px}
+
+img {
+    max-width: 100%;
+    /* text-align: center; */
+  }
+
+.viz-title{
+color: black;
+font-family: 'Titillium Web';
+font-size: 22px;
+font-weight: 700;	
+}
+
+.viz-subtitle{
+color: black;
+font-family: 'Titillium Web';
+font-size: 16px;
+font-weight: 300;
+max-width: 800px;
+}
+
+.viz-caption{
+color: grey;
+font-family: 'Titillium Web';
+font-size: 12px;
+font-weight: normal;
+padding-bottom: 20px;
+max-width: 800px;	
+}
+
+.section-subtitle{
+margin-bottom:10px;
+margin-top:10px;
+max-width: 700px;
+color: black;
+font-size: 18px;
+font-weight: 700;
+}	
+
+
+.section-subtitle{
+color: grey;
+font-family: 'Titillium Web';
+font-size: 12px;
+font-weight: normal;	
+}
+
+
+strong{
+font-weight:700}
+em,i{
+font-style:italic}
+p{
+margin-bottom:10px;
+}
+hr{
+height:1px;
+border-top:0;
+border-style:solid;
+border-color:#d1d3d4;
+color:#d1d3d4;
+background-color:#d1d3d4}
+
+
+.datetime{
+    color:#999;
+    font-size:12px;
+    text-transform:uppercase;
+    font-family:DecimaMono,Consolas,Monaco,monospace;}
+
+sup{
+    font-size:.8em;
+    vertical-align:super;
+    line-height:0}
+
+.nav-global{
+    flex-grow:6;
+    display:flex;
+    width:100%;
+    justify-content:space-between}
+    @media screen and (min-width:601px){.nav-global{padding-top:10px}}
+    .nav-global-menu{
+    width:100%;
+    overflow:hidden;
+    padding-top:10px}
+    @media screen and (min-width:601px){.nav-global-menu{width:auto;flex-shrink:0;padding-top:0}}
+    .nav-global-menu-item{
+    display:block;
+    width:100%;
+    padding:5px 0;
+    font-family:Titillum Web,"Helvetica Neue",Helvetica,Arial,sans-serif}
+    @media screen and (min-width:601px){.nav-global-menu-item{
+        display:inline;
+        width:auto;
+        position:relative;
+        padding:0;
+        margin:0 30px 0 0;
+        margin:0 1.875rem 0 0}}
+.single.nav-global-menu-item.-current-vertical{
+font-weight:700}
+.single .nav-global-menu-item.-current-vertical:after{opacity:1}
+
+
+
+
+.nav-global-menu-item.-mobile-only{
+display:block}
+@media screen and (min-width:601px){.nav-global-menu-item.-mobile-only{display:none}}.nav-global-menu-item>a{display:inline-block;padding:5px 0;color:#3c3c3c;font-size:14px;font-size:.875rem;text-decoration:none}
+@media screen and (min-width:601px){.nav-global-menu-item>a{padding:0}}
+
+.nav-global-toggle{
+    display:block;
+    color:#3c3c3c;
+    margin:0;
+    padding:5px;
+    padding:.3125rem;
+    border:1px solid #3c3c3c;
+    flex-grow:0;
+    font-size:11px;
+    font-size:.6875rem;
+    height:24px;
+    height:1.5rem;
+    min-width:3rem;
+    text-align:center;
+    line-height:1.3}
+    @media screen and (min-width:601px){.nav-global-toggle{display:none}}
+
+.header-global-bground{
+    background-color:#fff;
+    position:fixed;z-index:-1;
+    height:100%;
+    width:100%;
+    opacity:0}
+
+.header-global{
+    padding:10px 10px 10px;
+    padding:.625rem .625rem .625rem;
+    z-index:2;
+    background:#fff}
+    @media screen and (min-width:601px){.header-global{padding:20px 10px 10px 10px;padding:1.25rem .625rem .625rem .625rem;max-height:none}}
+
+.single.header-global{
+    padding-bottom:25px;
+    padding-bottom:1.5625rem}
+    @media screen and (max-width:767px){.single .header-global{padding-bottom:10px;padding-bottom:.625rem}}
+
+.header-global.site-wrapper{
+    display:flex;
+    flex-flow:row flex-start;
+    align-items:center;
+    align-content:center;
+    position:static;padding:0 0 10px;
+    padding:0 0 .625rem}
+
+.header-global .header-global-top{
+    border-bottom:2px solid #3c3c3c;
+    height:37px}@media screen and (max-width:600px){.header-global .header-global-bottom{z-index:-1;position:absolute;width:1%;visibility:hidden}}
+
+
+.article-title{
+font-family:'Titillium Web',"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size:18px;
+line-height:22px;
+font-weight:700;margin-bottom:10px;border-color:transparent}
+
+.article-title-single{
+font-family:'Titillium Web',"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size:22px;
+line-height:28px;
+font-weight:700;
+margin-bottom:6px;
+max-width: 700px; 
+padding-left: 5%;
+padding-right: 5%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+}
+@media (min-width:600px){.article-title-single{
+font-size:26px;
+line-height:36px;				
+max-width: 700px; 
+padding-left: 5%;
+padding-right: 5%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;}}
+
+.article-subtitle{
+font-family:'Titillium Web';
+font-size:15px;
+line-height:1.3;
+font-weight:400;
+max-width: 700px; 
+padding-left: 5%;
+padding-right: 5%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+color:#6d6f71}
+@media (min-width:600px){.article-subtitle{font-size:15px}}
+
+
+
+.single-metadata-single-topic{
+max-width: 700px; 
+padding-left: 5%;
+padding-right: 5%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+
+}
+
+.single-metadata-single-byline{
+max-width: 700px; 
+padding-left: 5%;
+padding-right: 5%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+
+}
+
+.single-topic{
+max-width: 700px; 
+padding-left: 5%;
+padding-right: 5%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+
+}
+
+
+.has-bugs{display:block;position:relative}
+.has-bugs .bug-container{position:relative;overflow:hidden}@media screen and (max-width:767px){#single-featured-image .has-bugs{width:100%}}@media screen and (max-width:440px){.promo .pullout{display:none}}
+
+/* .img-center{
+    text-align: center;
+
+} */
+
+/* MAP STYLES */
+
+/* [police brutality map styles */
+#map1 {
+    width: 100%;
+    height: 500px;
+    /* margin: 5em auto; */
+}
+
+#map2 {
+    width: 100%;
+    height: 500px;
+    /* margin: 5em auto; */
+}
+
+.mapboxgl-popup-content h4 {
+    font-family: 'Titillium Web';
+    font-weight: 300;
+    font-size: 0.9em;
+    border-width: 0px 0px 0.5px 0px;
+    border-style: solid;
+    border-color: rgb(80, 80, 80);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.mapboxgl-popup-content h2 {
+    font-family: 'Titillium Web';
+    font-weight: 500;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+}
+.mapboxgl-popup-content p {
+    font-family: 'Titillium Web';
+    font-weight: 300;
+    margin-top: 0.3em;
+    margin-bottom: 0em;
+}
+#menu {
+	background: #fff;
+	position: absolute;
+	z-index: 1;
+	bottom: 30px;
+	right: 3em;
+	border-radius: 3px;
+	width: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	font-family: 'Titillium Web';
+}
+#menu a {
+	font-size: 13px;
+	color: #404040;
+	display: block;
+	margin: 0;
+	padding: 0;
+	padding: 10px;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	text-align: center;
+}
+#menu a:last-child {
+	border: none;
+}
+#menu a:hover {
+	background-color: #f8f8f8;
+	color: #000000;
+}
+#menu a.active {
+	background-color: #404040;
+	color: #ffffff;
+}
+#menu a.active:hover {
+	background: #000000;
+}
+
+/* LEGEND STYLES*/
+.title {
+	background-color: #fff;
+	opacity: 85%;
+	/* border-radius: 1em; */
+	/* top: 5em; */
+    bottom: 15px;
+    left: 15px;
+	/* box-shadow: 0 1px 1px rgba(238, 156, 156, 0.1); */
+	/* font: .5em/.6em; */
+    font-family: 'Titillium Web';
+	/* line-height: 2.5em; */
+	padding: 0em 0.5em 0.5em 1em;
+	position: absolute;
+    max-width: 120px; 
+	/* max-width: 15%;  */
+	/* margin: 0em 5em; */
+	z-index: 100;
+}
+.title h1{
+	opacity: 100%;
+}
+.title p {
+	/* line-height: 1.5em; */
+	opacity: 100%;
+}
+.title div span {
+	border-radius: 50%;
+	/* display: inline-block; */
+	/* height: 10px; */
+	/* margin-left: 5px; */
+	width: 10px;
+}
+.title hr {
+	/* border-top: .2em dashed #404040; */
+	/* border-bottom: 0em; */
+	/* margin-top: .75em;
+	margin-bottom: .75em; */
+}
+.title2 {
+	background-color: #fff;
+	opacity: 85%;
+	/* border-radius: 1em; */
+	/* top: 5em; */
+    bottom: 15px;
+    left: 15px;
+	/* box-shadow: 0 1px 1px rgba(238, 156, 156, 0.1); */
+	/* font: .5em/.6em; */
+    font-family: 'Titillium Web';
+	/* line-height: 2.5em; */
+	padding: 0em 0.5em 0.5em 1em;
+	position: absolute;
+    max-width: 300px; 
+	/* max-width: 15%;  */
+	/* margin: 0em 5em; */
+	z-index: 100;
+}
+.title2 h1{
+	opacity: 100%;
+}
+.title2 p {
+	/* line-height: 1.5em; */
+	opacity: 100%;
+}
+.title2 div span {
+	border-radius: 50%;
+	display: inline-block;
+	height: 10px;
+	margin-left: 5px;
+	width: 10px;
+}
+.title2 hr {
+	border-top: .2em dashed #404040;
+	border-bottom: 0em;
+	/* margin-top: .75em;
+	margin-bottom: .75em; */
+}
+
+.legend {
+    font: 1em/1.5em;
+    font-family: 'Titillium Web';
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	position: relative;
+    /* top: 20px; */
+	/* right: 20%; */
+	z-index: 100;
+	opacity: 100%
+/* 
+	font: 1em/1.5em;
+    font-family: 'Titillium Web';
+	padding: 1em 1em 1em 1em;
+	position: absolute;
+    left: 20%;
+	right: 50px;
+	z-index: 100;
+	opacity: 100%; */
+}
+.legend h4 {
+	/* margin: 0 0 10px; */
+    font-family: 'Titillium Web';
+	opacity: 100%
+}
+.legend div span {
+	border-radius: 50%;
+	display: inline-block;
+	height: 12px;
+    width: 12px;
+	margin-top: 0px;
+	margin-right: 10px; 
+}
+.legend2 {
+	font: 1em/1.5em;
+    font-family: 'Titillium Web';
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	position: relative;
+    /* top: 20px; */
+	right: 4%;
+	z-index: 100;
+	opacity: 100%
+}
+.legend2 h4 {
+    font-size: 12px;
+    font-family: 'Titillium Web';
+	/* margin: 0 0 0px; */
+	opacity: 100%
+}
+.legend2 p {
+    font-size: 12px;
+    font-family: 'Titillium Web';
+	padding-top: 0px;
+	margin-top: 0px;
+}
+.legend2 div span {
+	border-radius: 0%;
+    display: inline-block;
+	/* border-style: solid; */
+	/* border-color: black; */
+	border-width: 1px;
+	/* margin: auto; */
+	/* display: inline-block; */
+	height: 10px;
+    width: 20px;
+	margin-top: 0px;
+	margin-right: 10px;
+	/* margin-left: 10px; */
+	opacity: 100%
+}

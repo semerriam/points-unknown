@@ -3,7 +3,7 @@
 // mapbox info
 mapboxgl.accessToken = 'pk.eyJ1Ijoic21lcnJpYW0iLCJhIjoiY2w0MzQ2MXZ0MmxjMjNjbzJ2Z3p2aTg4diJ9.utk0iQOt4bBP41MFR0wO-g';
 var map1 = new mapboxgl.Map({
-    container: 'map',
+    container: 'map1',
     style: 'mapbox://styles/smerriam/cl43jlfsg000215p8qfj1fpd0',
     zoom: 3.3,
     maxZoom: 9,

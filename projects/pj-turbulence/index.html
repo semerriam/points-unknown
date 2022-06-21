@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Traject</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+
+    <title>Susan Merriam</title>
+	<meta charset="utf-8">
+	<meta name="description" content="data journalism">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" type='text/css'> 
+
+	<!-- map -->
+
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="https://d3js.org/queue.v1.min.js"></script>
+	<script src="https://d3js.org/topojson.v1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.10.0/d3-legend.min.js"></script>
+	<script src="colorbrewer.js"></script>
+		
+
+	
+	<!-- stylesheet!!!! -->
+	<link rel="stylesheet" type="text/css" href="project-stylesheet.css"> 
+
+		<style type="text/css" id="wp-custom-css">
+			#section.viz {
+				color: black;
+				font-family: 'Titillium Web';
+				font-size: 18px;
+				font-weight: 900;	}		
+		</style>
+	
+	<!-- from other file -->
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+</head>
+
+<body>
+	<style>
+		button {
+			position: absolute;
+			margin: 20px;
+		}
+
+		#pause::after {
+			content: 'Pause';
+		}
+
+		#pause.pause::after {
+			content: 'Play';
+		}
+	</style>
+
+
+	<div id="main">
+		<h1><a href="../../index.html">Susan Merriam<br></a>
+        </h1>
+		<!-- <h2>Investigating Census Peculiarities<br>
+			Data Project<br>
+            2022
+		</h2> -->
+	</div>	
+
+	<div class="site-main">
+		<div id="wrapper" class="site-wrapper">
+			
+			<div id="content" class="single single-feature" data-col="2">
+	
+				<div class="single-feature__row">
+					<div id="primary" class="single-feature__col">
+						<div id="article-main">
+
+							<div class="article-header__container">
+
+								<header class="single-post-header">
+									<div class="single-header">
+										<p class="single-metadata-single-topic">
+											<span style="color: MidnightBlue">
+												<strong>
+													Points Unknown 
+												</strong>
+											</span>
+										</p>
+										
+										<h1 class="article-title article-title-single entry-title">Mapping Clear-air Turbulence</h1>
+				
+									</div> <!-- single-header -->
+				
+									<div class="single-header-metadata-and-share-wrap">
+										<div class="single-header-metadata-wrap">
+											<p class="single-metadata-single-byline">
+												<a href="https://github.com/semerriam/points-unknown/tree/main/projects/pj-turbulence" target="_blank"> <u style="text-decoration-color:MidnightBlue">Github Project Repo</u></a>
+											</p>
+											
+											
+
+
+											<p class="topic single-topic">
+												<time class="datetime">Jun. 20, 2022</time>
+				
+										</div><!-- single header info wrap -->
+										
+									</div><!-- single header info -->
+									
+								</header><!-- single post header -->
+
+							</div> <!-- article header container -->
+
+							<div class="textblock"> 
+								<br>
+								<p data-paragraph="main">
+									“Clear-air turbulence is so named because it comes literally out of the blue,” <a href="https://www.versobooks.com/blogs/4507-the-future-will-be-bumpy" target="_blank"><u style="text-decoration-color:MidnightBlue">described technologist</u></a> James Bridle in his book, New Dark Age. “It occurs when bodies of air moving at wildly different speeds meet: as the winds shear against each other, vortices and chaotic movements are produced.”  
+								</p>	
+								<p data-paragraph="main">
+									The relationship between air travel and clear air turbulence is an apt metaphor for the larger challenge that is climate change. While  <a href="https://phys.org/news/2020-09-aviation-contributes-drivers-climate-stem.html" target="_blank"><u style="text-decoration-color:MidnightBlue">air travel continues</u></a>  
+									to contribute to carbon dioxide and nitrogen oxide emissions, the increased levels of carbon dioxide in the atmosphere has led to increased levels of turbulence that passengers do not see coming and that inevitably slows down air travel. 
+								</p>
+								
+								<p data-paragraph="main">
+									Nearly a decade ago, <a href="https://www.nature.com/articles/nclimate1866#:~:text=At%20cruise%20altitudes%20within%2050,moderate%2Dor%2Dgreater%20turbulence." target="_blank"><u style="text-decoration-color:MidnightBlue">scientists studying clear-air turbulence </u></a> showed that in winter, the strength of turbulence and the frequency of “moderate-or-greater turbulence” increased significantly when the concentration of carbon dioxide was doubled. The scientists stated that their results “suggest that climate change will lead to bumpier transatlantic flights by the middle of this century.” 
+								</p>
+
+								
+
+								<br>
+								<!-- <br> -->
+							</div>
+									
+												
+
+
+
+								<!-- Chart Header Chart-->		
+								<div class="core-html ">
+									<section class="viz">
+									<header class="viz">
+										<h5 class="viz-title">Get ready for a bumpy ride</h5>
+										 <p class="viz-subtitle">Flight paths between airports compared to CO2 emissions by country 
+											 
+										 </p>
+								 	</header>
+									</section>
+								</div>
+								<!-- <br>
+								<br> -->
+								<hr>
+								
+								
+								<!-- CHART!!!!!-->
+								<div id="map_a" >
+									<div id='map_a'>
+										<nav id="menu"></nav>
+										<!-- Legend -->
+										<div id='title-b' class="title">
+
+											<div id="industry-legend" class="legend2">
+												<h4>Countries' CO2 Emissions</h4>
+												<div>
+													<span style="background-color: #D7E4CB"></span>Smallest CO2 Emitters
+												</div>
+												<div>
+													<span style="background-color: #08519c"></span>Largest CO2 Emitters
+												</div>
+												<!-- <div>
+													<span style="background-color: MidnightBlue"></span>Flight Paths 
+												</div> -->
+												
+											</div>
+											
+										</div>
+									</div>
+										
+									</div>
+								</div>
+
+								<script type='text/javascript' src="map_a.js"></script>
+
+								<!-- Chart Footer Graph1-->		
+								<div class="core-html">
+									<p class="viz-caption">Source: <a href="https://data.worldbank.org/indicator/EN.ATM.CO2E.KT?most_recent_year_desc=false" target="_blank"><u style="text-decoration-color:MidnightBlue">World Bank CO2 Emissions data</u></a>, <a href="http://arm.64hosts.com/" target="_blank"><u style="text-decoration-color:MidnightBlue">Airline Route Mapper</u></a>, <a href="https://openflights.org/data.html" target="_blank"><u style="text-decoration-color:MidnightBlue">Open Flights Airport Database</u></a>
+
+										
+									</p>
+								</div>
+
+								<!-- Chart Ends-->		
+
+
+								<div class="textblock"> 
+									<br>
+									
+									<p data-paragraph="main">
+										Clear-air turbulence or CAT occurs in patches above 15,000 feet and is generally around 2,000 feet deep, 20 miles wide and 50 miles long according to the National Weather Service. When pilots begin to encounter turbulence, they are <a href="https://skybrary.aero/articles/clear-air-turbulence-cat" target="_blank"><u style="text-decoration-color:MidnightBlue">recommended</u></a>  to slow down the aircraft and notify the crew and passengers to fasten seat belts. Since 2017, there have been at least eighteen significant flight accidents attributed to clear-air turbulence.    
+									</p>
+
+									<!-- <p data-paragraph="main">
+										
+									</p> -->
+
+									<p data-paragraph="main">
+										In the most dramatic example of CAT from the past, in 1997 a flight from Tokyo to Hawaii hit clear air turbulence and several passengers and crew members were injured and one passenger died as a result. According to the <a href="https://skybrary.aero/sites/default/files/bookshelf/368.pdf" target="_blank"><u style="text-decoration-color:MidnightBlue">National Transportation Safety Board report,</u></a> none of the severely injured parties were wearing a seatbelt. 
+
+									</p>
+
+									 
+									<img src="imgs/cat.png" class="center3">
+
+									<div class="core-html">
+										<p class="viz-caption2">Source: <a href="https://www.weather.gov/source/zhu/ZHU_Training_Page/turbulence_stuff/turbulence/turbulence.htm" target="_blank"><u style="text-decoration-color:MidnightBlue">National Weather Service</u></a>
+										</p>
+									</div>
+	
+
+									<p data-paragraph="main">
+										According to the map above, the eastern part of China could see more clear-air turbulence on flights given the significant air traffic and the country's heavy CO2 emissions. Similarly, on the East Coast of the U.S. international flights from cities such as New York, Boston, and Atlanta could experience more clear-air turbulence.  
+									</p>
+									<img src="imgs/east_coasts.png" class="center2">
+									<div class="core-html">
+										<p class="viz-caption2">Source: <a href="https://data.worldbank.org/indicator/EN.ATM.CO2E.KT?most_recent_year_desc=false" target="_blank"><u style="text-decoration-color:MidnightBlue">World Bank CO2 Emissions data</u></a>, <a href="http://arm.64hosts.com/" target="_blank"><u style="text-decoration-color:MidnightBlue">Airline Route Mapper</u></a>, <a href="https://openflights.org/data.html" target="_blank"><u style="text-decoration-color:MidnightBlue">Open Flights Airport Database</u></a>
+	
+											
+										</p>
+									</div>
+
+									<p data-paragraph="main">
+										While many countries emit far less C02 than others. There are still hotspots less reflected in the map above. NOAA measures CO2 emissions in the atmosphere across land masses and the oceans with their <a href="https://gml.noaa.gov/ccgg/carbontracker/" target="_blank"><u style="text-decoration-color:MidnightBlue">Carbon Tracker</u></a>. The two maps below are measurements of average concentration of C02 in Western Africa in 2019. 
+
+									</p>	
+
+									<img src="imgs/flux.png" class="center">
+									<div class="core-html">
+										<p class="viz-caption2">Source: <a href="https://gml.noaa.gov/aftp/products/carbontracker/co2/CT-NRT.v2022-1/fluxes/monthly/" target="_blank"><u style="text-decoration-color:MidnightBlue">NOAA Carbon Tracker of 2019 data</u></a>
+										</p>
+									</div> 
+									
+									<p data-paragraph="main">
+										Additionally, when compared with countries like China, U.S., and India, countries in Europe emit far less CO2, however there is significant air traffic and cumulatively could be a potential cause of clear-air turbulence. 
+									</p>
+
+								</div>
+
+
+
+
+								<!-- Chart Header Chart-->		
+								<!-- <div class="core-html ">
+									<section class="viz">
+									<header class="viz">
+										<h5 class="viz-title">text</h5>
+										 <p class="viz-subtitle">text
+										 </p>
+								 	</header>
+									</section>
+								</div> -->
+								
+								<!-- MAP 2!!!!!-->
+								<!-- <div id="map_b" >
+									
+									<div id='map_b'> -->
+										<!-- Legend -->
+										<!-- <div id='title-b' class="title">
+
+											<div id="industry-legend" class="legend2">
+												<h4>Countries' CO2 Emissions</h4>
+												<div>
+													<span style="background-color: #D7E4CB"></span>Smallest CO2 Emitters
+												</div>
+												<div>
+													<span style="background-color: #08519c"></span>Largest CO2 Emitters
+												</div> -->
+												<!-- <div>
+													<span style="background-color: MidnightBlue"></span>Flight Paths 
+												</div> -->
+<!-- 												
+											</div>
+											
+										</div>
+									</div>
+									
+									<script type='text/javascript' src="map_b.js"></script>
+									
+
+								</div> 		 -->
+										
+								<!-- Chart Footer Graph2-->		
+								<!-- <div class="core-html">
+									<p class="viz-caption">Source: <a href="https://data.worldbank.org/indicator/EN.ATM.CO2E.KT?most_recent_year_desc=false" target="_blank"><u style="text-decoration-color:MidnightBlue">World Bank CO2 Emissions data</u></a>, <a href="http://arm.64hosts.com/" target="_blank"><u style="text-decoration-color:MidnightBlue">Airline Route Mapper</u></a>, <a href="https://openflights.org/data.html" target="_blank"><u style="text-decoration-color:MidnightBlue">Open Flights Airport Database</u></a>
+
+										
+									</p>
+									
+								</div> -->
+
+
+
+
+								<div class="textblock"> 
+
+									
+									
+									<img src="imgs/europe.png" class="center">
+									<div class="core-html">
+										<p class="viz-caption2">Source: <a href="https://data.worldbank.org/indicator/EN.ATM.CO2E.KT?most_recent_year_desc=false" target="_blank"><u style="text-decoration-color:MidnightBlue">World Bank CO2 Emissions data</u></a>, <a href="http://arm.64hosts.com/" target="_blank"><u style="text-decoration-color:MidnightBlue">Airline Route Mapper</u></a>, <a href="https://openflights.org/data.html" target="_blank"><u style="text-decoration-color:MidnightBlue">Open Flights Airport Database</u></a>
+	
+											
+										</p>
+									</div>
+
+
+									
+	
+									<br>
+									<!-- <br> -->
+								</div>
+
+								
+
+								
+
+	
+
+
+
+						</div><!-- article main -->
+					</div><!-- primary single-feature_col -->
+				</div><!-- single-feature__row -->
+
+			</div><!-- .single single-feature -->
+			
+			<hr style="width:5%" color:"#9EB777">
+
+			<div id="description">
+				<h3>
+					<br>
+					<!-- <br> -->
+					<em>
+					<!-- Tools Used:
+		
+					Data: Python –⁠ Pandas,  <br>
+					Graphs: JavaScript, Mapbox GL JS  -->
+					<br>
+					<a href="https://github.com/semerriam/points-unknown/tree/main/projects/pj-turbulence" target="_blank"><u style="text-decoration-color:MidnightBlue">Github</u></a>
+					<br>
+					<br>
+					<a href="../../index.html" target="_blank"> <u style="text-decoration-color:MidnightBlue">Home</u></a>
+					
+					<br>
+					</em>
+				</h3>
+			</div>
+		</div><!-- #wrapper .site-wrapper -->
+	</div><!-- .site-main -->
+
+
+
+</body>
+
+</head>

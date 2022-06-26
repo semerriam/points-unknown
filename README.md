@@ -5,6 +5,7 @@ Data publication and documentation for mapping class assignments in the [Points 
 ## Projects
 ### Directories
 
+* [pj-barley](projects/pj-barley) maps wildfire risk data and U.S. barley production. 
 * [pj-turbulence](projects/pj-turbulence) maps global flight paths compared to countries' CO2 emissions. 
 * [pj-citibike-map](projects/pj-citibike-map) maps the starting and ending locations for September 2020 and September 2021 Citibike rides that can be found [here](https://semerriam.github.io/points-unknown/projects/pj-citibike-map/).
 * [pj-mapping-assignmments2](projects/pj-mapping-assignmments2) includes a point distribution map of where police used brutality against portestors in 2020 and a chloropleth map of county-level data of the industries that the population are dependent on. The maps can be found [here](https://semerriam.github.io/points-unknown/projects/pj-mapping-assignmments2/).

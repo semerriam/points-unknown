@@ -1,4 +1,4 @@
-# Citibike Map
+# Citibike Maps
 
 Documentation for mapping project that can be found [here](https://semerriam.github.io/points-unknown/projects/pj-citibike-map/). 
 

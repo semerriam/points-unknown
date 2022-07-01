@@ -1,7 +1,7 @@
 // map_a.js 
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic21lcnJpYW0iLCJhIjoiY2w0dTgya3g1MXJ5MzNocWNxMmZ0a3BnZiJ9.6rOGDeeBgzOJo1FM3C_Jfg';
-const map_a = new mapboxgl.Map({
+var map_a = new mapboxgl.Map({
     container: 'map_a',
     style: 'mapbox://styles/smerriam/cl4u83m3o000b14o9keixyawt',
     zoom: 4.7,
@@ -11,9 +11,12 @@ const map_a = new mapboxgl.Map({
     maxBounds: [[-122, 39], [-97, 51]] 
 });
 
+// inserted variable for popup
+var popup = new mapboxgl.Popup({
+    closeButton: false
+});
 
 map_a.on('load', function () {
-    
     let layers = map_a.getStyle().layers;
     let firstSymbolId;
         for (var i = 0; i < layers.length; i++) {
@@ -23,53 +26,15 @@ map_a.on('load', function () {
             break;
         }
     }
-  
-    // map_a.addLayer({
-    //     'id': 'Barley Points',
-    //     'type': 'circle',
-    //     'source': {
-    //         'type': 'geojson',
-    //         'data': 'data/barleyData_points.geojson'
-    //     },
-    //     'paint': {
-    //       'circle-color': '#5f0f40',
-    //       'circle-opacity': 0.00,
-    //       'circle-radius': 10,
-    //     //   "circle-radius": 
-    //         //  [
-    //         // "interpolate", ["linear"], ["zoom"],
-    //         // 0, ["get", "value"],
-    //         // 10, ["*", 4, ["get", "value"]]
-    //         // ]
-          
-    //         // 'circle-stroke-color': '#4d4d4d',
-    //         // 'circle-stroke-width': 0.5,
-    //         // 'circle-radius': 
-    //         //     // 4,
-    //         //     ['interpolate', ['exponential', 2], ['zoom'],
-    //         //         4.5, ['interpolate', ['linear'], ['get', 'value'],
-    //         //             0, 0, 
-    //         //             0.0001, 10 
-    //         //         ],
-    //         //         6, ['interpolate', ['linear'], ['get', 'value'], 
-    //         //             0.0001, 10, 
-    //         //             0, 0
-    //         //         ], 
-    //         //     ],
-    //   }
-    // }, 
-    // firstSymbolId
-    // ); 
-  
 
     map_a.addLayer({
-        'id': 'Barley Shapes',
-        'type': 'fill',
-          'source': {
-              'type': 'geojson',
-              'data': 'data/barleyData_geo.geojson'
+        id: 'barley_shapes',
+        type: 'fill',
+          source: {
+              type: 'geojson',
+              data: 'data/barleyData_geo.geojson'
           },
-          'paint': {
+          paint: {
                 //   "fill-color": 
                 //   ['step', ['get', 'value'],
                 //         '#ffffff',
@@ -80,20 +45,20 @@ map_a.on('load', function () {
                 //       523400000, "#023e8a"
                 //   ],
                 // "fill-outline-color": "#ffcf67",
-                    "fill-opacity":0 ,
-          },
-      }, 
-      firstSymbolId
-      );
+                "fill-opacity": 0,
+            },
+        }, 
+        firstSymbolId
+        );
 
     map_a.addLayer({
-      'id': 'Mean BP',
-      'type': 'fill',
-        'source': {
+      id: 'Mean BP',
+      type: 'fill',
+        source: {
             'type': 'geojson',
             'data': 'data/countiesData.geojson'
         },
-        'paint': {
+        paint: {
                 "fill-color": [
                     "match",
                     ["get", "naturalBreaksMBP"],
@@ -108,28 +73,26 @@ map_a.on('load', function () {
                 ],
                   "fill-outline-color": "#ffcf67",
                   "fill-opacity": 0.8,
-        }
+        },
     }, 
     'waterway-shadow'
     );
-
   });
 
   
-
     // create function to seperate numbers with commas for bushel numbers
     
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
     
-    // Create the popup
-    // map_a.on('click', 'Barley Points', function (e) {
-    map_a.on('click', 'Barley Shapes', function (e) {
-        let county = e.features[0].properties.NAME;
-        let bushels = e.features[0].properties.value;
-        new mapboxgl.Popup()
-            .setLngLat(e.lngLat)
+    // Create the popup + mouseover
+    map_a.on('mousemove', 'barley_shapes', function (e) {
+        map_a.getCanvas().style.cursor = 'pointer';
+        var county = e.features[0].properties.NAME;
+        var bushels = e.features[0].properties.value;
+        popup
+        .setLngLat(e.lngLat)
             .setHTML(`
                 <p>
                     <b>${county} County</b><br>${numberWithCommas(bushels)} Bushels 
@@ -137,11 +100,9 @@ map_a.on('load', function () {
             `)
         .addTo(map_a);
     });
-    // Change the cursor to a pointer when the mouse is over the turnstileData layer.
-    map_a.on('mouseenter', 'Barley Shapes', function () {
-    map_a.getCanvas().style.cursor = 'pointer';
-    });
+        
     // Change it back to a pointer when it leaves.
-    map_a.on('mouseleave', 'Barley Shapes', function () {
-    map_a.getCanvas().style.cursor = '';
-    });
+    map_a.on('mouseout', 'barley_shapes', function () {
+        map_a.getCanvas().style.cursor = '';
+        popup.remove();
+      });

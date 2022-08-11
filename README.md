@@ -5,6 +5,7 @@ Data publication and documentation for mapping class assignments in the [Points 
 ## Projects
 ### Directories
 
+* [pj-critical-habitats](projects/pj-critical-habitats) maps the critical habitats in the U.S. and draws specific attention to bee and stonefly species with scrollytelling details and secondary elements. The map can be found [here](https://semerriam.github.io/points-unknown/projects/pj-critical-habitats/).
 * [pj-barley](projects/pj-barley) maps wildfire risk data and U.S. barley production. The map can be found [here](https://semerriam.github.io/points-unknown/projects/pj-barley/).
 * [pj-turbulence](projects/pj-turbulence) maps global flight paths compared to countries' CO2 emissions. The maps can be found [here](https://semerriam.github.io/points-unknown/projects/pj-turbulence/).
 * [pj-citibike-map](projects/pj-citibike-map) maps the starting and ending locations for September 2020 and September 2021 Citibike rides that can be found [here](https://semerriam.github.io/points-unknown/projects/pj-citibike-map/).

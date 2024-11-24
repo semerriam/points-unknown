@@ -16,11 +16,11 @@
     <!-- Inline CSS -->
     <style>
         body {
-            background-color: #111019;
+            /* background-color: #111019; */
             margin: 0;
             font-family: 'Titillium Web', sans-serif;
             text-rendering: optimizeLegibility;
-            color: rgb(248, 238, 238);
+            /* color: rgb(248, 238, 238); */
         }
 
         #nav {
@@ -28,20 +28,39 @@
             top: 0;
             width: 100%;
             z-index: 10;
-            background-color: #111019;
-            padding: 15px;
+            padding-bottom: 15px;
+            background: white;
+            /* background: #0F1521; */
+            /* background: #111019; */
         }
 
-        #nav h1 a {
-            text-decoration: none;
+        #nav h1 {
+            margin: 15px 15px 15px 15px;
             font-size: 20px;
             font-weight: 600;
-            color: rgb(248, 238, 238);
+            line-height: 26px;
+            /* color: rgb(248, 238, 238); */
         }
 
-        #nav h1 a:hover {
+       #nav h2 {
+            margin: 0px 15px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 16px;
+            /* color: rgb(248, 238, 238); */
+        }
+
+        #nav h1 a, #nav h2 a {
+            text-decoration: none;
+            color: black;
+            /* color: rgb(248, 238, 238); */
+            transition: 0.2s;
+        }
+
+        #nav h1 a:hover, #nav h2 a:hover {
+            background-color: #bfe6ff;
             text-decoration: underline;
-            background-color: #373348;
+            /* background-color: #373348; */
         }
 
         .content {
